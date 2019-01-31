@@ -3,4 +3,3 @@ a.sort()
 n = len(a)
 l = a[n-1]
 print(l)
-print(a)
