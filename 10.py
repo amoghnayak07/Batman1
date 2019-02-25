@@ -1,9 +1,15 @@
+import csv
 n = int(input("Enter no of students"))
-c = {}
-d = {}
+c = []
+d = []
 for i in range(n):
 	name = input("Enter name:")
 	usn = input("Enter the reg num")
-	c.update({name:usn})
+	d = [name, usn]
+	c.extend(d)
 print(c)
+with open('register5.csv', 'a', newline='\n') as csvfile:
+	spamwriter = csv.writer(csvfile)
+
+	spamwriter.writerow(c)
 	
